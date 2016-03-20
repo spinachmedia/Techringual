@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Word:
+  = @word_rank_info.word
+p
+  strong Site:
+  = @word_rank_info.site_id
+p
+  strong Count:
+  = @word_rank_info.count
+
+= link_to 'Edit', edit_word_rank_info_path(@word_rank_info)
+'|
+= link_to 'Back', word_rank_infos_path

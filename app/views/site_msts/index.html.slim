@@ -1,0 +1,31 @@
+p#notice
+  = notice
+h1
+  | Listing Site Msts
+table
+  thead
+    tr
+      th
+        | Contents name
+      th
+        | Home url
+      th
+        | Base url
+      th[colspan="3"]
+  tbody
+    - @site_msts.each do |site_mst|
+      tr
+        td
+          = site_mst.contents_name
+        td
+          = site_mst.home_url
+        td
+          = site_mst.base_url
+        td
+          = link_to 'Show', site_mst
+        td
+          = link_to 'Edit', edit_site_mst_path(site_mst)
+        td
+          = link_to 'Destroy', site_mst, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Site mst', new_site_mst_path

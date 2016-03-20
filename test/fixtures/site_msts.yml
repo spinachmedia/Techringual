@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contents_name: MyText
+  home_url: MyText
+  base_url: MyText
+
+two:
+  contents_name: MyText
+  home_url: MyText
+  base_url: MyText

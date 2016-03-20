@@ -1,0 +1,24 @@
+= form_for(@site_mst) do |f|
+  - if @site_mst.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@site_mst.errors.count, "error")
+        |  prohibited this site_mst from being saved:
+      ul
+        - @site_mst.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = f.label :contents_name
+    br
+    = f.text_area :contents_name
+  .field
+    = f.label :home_url
+    br
+    = f.text_area :home_url
+  .field
+    = f.label :base_url
+    br
+    = f.text_area :base_url
+  .actions
+    = f.submit

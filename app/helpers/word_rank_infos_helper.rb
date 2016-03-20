@@ -1,0 +1,2 @@
+module WordRankInfosHelper
+end

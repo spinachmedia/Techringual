@@ -1,0 +1,25 @@
+h1 Listing word_rank_infos
+
+table
+  thead
+    tr
+      th Word
+      th Site
+      th Count
+      th
+      th
+      th
+
+  tbody
+    - @word_rank_infos.each do |word_rank_info|
+      tr
+        td = word_rank_info.word
+        td = word_rank_info.site_id
+        td = word_rank_info.count
+        td = link_to 'Show', word_rank_info
+        td = link_to 'Edit', edit_word_rank_info_path(word_rank_info)
+        td = link_to 'Destroy', word_rank_info, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Word rank info', new_word_rank_info_path

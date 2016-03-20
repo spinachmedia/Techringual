@@ -1,0 +1,25 @@
+h1 Listing english_msts
+
+table
+  thead
+    tr
+      th Word
+      th Mean
+      th Valid
+      th
+      th
+      th
+
+  tbody
+    - @english_msts.each do |english_mst|
+      tr
+        td = english_mst.word
+        td = english_mst.mean
+        td = english_mst.valid
+        td = link_to 'Show', english_mst
+        td = link_to 'Edit', edit_english_mst_path(english_mst)
+        td = link_to 'Destroy', english_mst, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New English mst', new_english_mst_path

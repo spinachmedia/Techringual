@@ -1,0 +1,18 @@
+/サイトの情報をループして表示
+- @sites.each do |site|
+  p = "SiteId: " + site.id.to_s
+  p = "SiteName: " + site.contents_name.to_s
+  h2 単語頻出ランキング
+  table
+    tr
+      td id
+      td word
+      td siteId
+      td count
+    - site.getRanking.each do |rank|
+      tr
+        td = rank.id
+        td = rank.word
+        td = rank.site_id
+        td = rank.count
+  

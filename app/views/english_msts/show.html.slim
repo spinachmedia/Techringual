@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Word:
+  = @english_mst.word
+p
+  strong Mean:
+  = @english_mst.mean
+p
+  strong Valid:
+  = @english_mst.valid
+
+= link_to 'Edit', edit_english_mst_path(@english_mst)
+'|
+= link_to 'Back', english_msts_path

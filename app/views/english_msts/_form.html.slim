@@ -1,0 +1,18 @@
+= form_for @english_mst do |f|
+  - if @english_mst.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@english_mst.errors.count, "error")} prohibited this english_mst from being saved:"
+      ul
+        - @english_mst.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :word
+    = f.text_area :word
+  .field
+    = f.label :mean
+    = f.text_area :mean
+  .field
+    = f.label :valid
+    = f.check_box :valid
+  .actions = f.submit

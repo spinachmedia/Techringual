@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  strong
+    | Contents name:
+  = @site_mst.contents_name
+p
+  strong
+    | Home url:
+  = @site_mst.home_url
+p
+  strong
+    | Base url:
+  = @site_mst.base_url
+= link_to 'Edit', edit_site_mst_path(@site_mst)
+|  | 
+= link_to 'Back', site_msts_path

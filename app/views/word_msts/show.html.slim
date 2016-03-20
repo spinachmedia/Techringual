@@ -1,0 +1,21 @@
+p#notice
+  = notice
+p
+  strong
+    | Word:
+  = @word_mst.word
+p
+  strong
+    | Site:
+  = @word_mst.site_id
+p
+  strong
+    | Url:
+  = @word_mst.url
+p
+  strong
+    | Count:
+  = @word_mst.count
+= link_to 'Edit', edit_word_mst_path(@word_mst)
+|  | 
+= link_to 'Back', word_msts_path

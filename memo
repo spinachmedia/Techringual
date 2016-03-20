@@ -1,0 +1,22 @@
+rails g scaffold WordMst word:text site_id:integer url:text count:integer
+rails g scaffold SiteMst contents_name:text home_url:text base_url:text
+rails g scaffold WordRankInfo  word:text site_id:integer count:integer
+rails g scaffold EnglishMst  word:text mean:text valid:boolean
+
+rails destroy model SiteMst
+rails generate migration AddBaseUrlToSiteMst base_url:text
+
+rake db:migrate
+rake db:rollback 
+
+
+https://techlingual-spinachmedia.c9users.io/word_msts
+
+
+rails runner GetWord::Batch.execute
+
+spring rails runner lib/tasks/CroleSite.rb
+spring rails runner lib/tasks/Merge.rb
+
+sqlite3 db/development.sqlite3
+

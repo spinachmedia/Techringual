@@ -7,8 +7,8 @@ deployment:
   production:
     branch: master
     commands:
-      - heroku maintenance:on --app techlingual
-      - heroku scale worker=0 --app techlingual
+      - heroku maintenance:on --app techringual
+      - heroku scale worker=0 --app techringual
       - git push -f git@heroku.com:techringual.git $CIRCLE_SHA1:refs/heads/master
       - heroku run 'rake db:migrate; rake db:seed_fu' --app techringual # seed管理にseed_fu使ってます
       - heroku maintenance:off --app techringual
